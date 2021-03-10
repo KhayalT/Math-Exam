@@ -8,22 +8,25 @@ namespace Math
         {
             for (int i = 1; i <= 100; i++)
             {
-                if (i % 3 == 0 && i % 5 != 0)
+                string strg = "";
+                if (i % 3 == 0)
                 {
-                    Console.WriteLine("Fizz");
+                    strg += "Fizz";
                 }
-                else if (i % 5 == 0 && i % 3 != 0)
+                if (i % 5 == 0)
                 {
-                    Console.WriteLine("Buzz");
+                    strg += "Buzz";
                 }
-                else if (i % 3 == 0 && i % 5 == 0)
+                if (i % 7 == 0)
                 {
-                    Console.WriteLine("FizzBuzz");
+                    strg += "Bazz";
                 }
-                else
+                if (strg.Length == 0)
                 {
-                    Console.WriteLine(i);
+                    strg = i.ToString();
                 }
+                Console.WriteLine(strg);
+
             }
         }
     }
